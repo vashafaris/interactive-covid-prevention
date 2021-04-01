@@ -1,13 +1,266 @@
+html {
+  font-size: 62.5%;
+}
+
 body {
-  margin: 0;
+  margin: 0 auto;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1 {
+  font-size: 5.6rem;
+  font-weight: normal;
+
+  background: linear-gradient(to right, #f12711, #f5af19);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+p {
+  font-size: 1.8rem;
+  margin-top: 2.4rem;
+}
+
+.container {
+  background-color: black;
+
+  transition: 0.5s ease-out;
+}
+
+.alert {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 130vh;
+  margin-bottom: 10vh;
+}
+
+.alert__img {
+  width: 60%;
+}
+
+.mask {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.mask__title {
+  background: linear-gradient(to right, #338f7c, #80cbb7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.mask__img-men {
+  height: 40rem;
+  width: 35rem;
+
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.mask__img-mask {
+  top: calc(50% - 1rem);
+  position: absolute;
+  height: 15rem;
+  width: 15rem;
+  cursor: grab;
+}
+
+.mask__gif-covids {
+  position: absolute;
+  top: 30%;
+  left: 2rem;
+  width: 30%;
+  border-radius: 50%;
+}
+
+.mask__gif-covid {
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  width: 30%;
+
+  border-radius: 50%;
+}
+
+.distancing {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.distancing__svg-container {
+  margin-top: 2.4rem;
+  height: 30rem;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.distancing__img-station {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+
+  height: 20rem;
+}
+
+.distancing__img-girl {
+  position: absolute;
+  left: 10%;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+
+  width: 45rem;
+  height: 30rem;
+}
+
+.distancing__img-dude {
+  cursor: grab;
+  position: absolute;
+  right: 10%;
+  width: 45rem;
+}
+
+.home {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.switch-container {
+  margin-top: 4.2rem;
+  position: relative;
+}
+
+.home__police {
+  position: absolute;
+  transform: translate(-50%);
+  left: 50%;
+  height: 9rem;
+
+  transition: 0.5s ease-in;
+  animation-name: in;
+  animation-duration: 0.5s;
+}
+
+@keyframes in {
+  from {
+    top: -8.5rem;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes out {
+  from {
+    top: 0;
+  }
+  to {
+    top: -8.5rem;
+  }
+}
+
+.home__police-out {
+  position: absolute;
+  transform: translate(-50%);
+  left: 50%;
+  top: -8.5rem;
+  height: 9rem;
+
+  transition: 0.5s ease-out;
+  animation-name: out;
+  animation-duration: 0.5s;
+}
+
+@keyframes peek-in {
+  from {
+    top: -4.5rem;
+  }
+  to {
+    top: 0;
+  }
+}
+
+.home__police-peek {
+  position: absolute;
+  transform: translate(-50%);
+  left: 50%;
+  top: 0;
+  height: 9rem;
+
+  animation-name: peek-in;
+  animation-duration: 0.5s;
+}
+
+@keyframes peek-out {
+  from {
+    top: 0;
+  }
+  to {
+    top: -4.5rem;
+  }
+}
+
+.home__police-peek-out {
+  position: absolute;
+  transform: translate(-50%);
+  left: 50%;
+  top: -4.5rem;
+  height: 9rem;
+
+  animation-name: peek-out;
+  animation-duration: 0.5s;
+}
+
+.home__gif-container {
+  display: flex;
+  justify-content: center;
+  display: none;
+}
+
+.home__gif-container > img {
+  margin-top: 2.4rem;
+  width: 30%;
+}
+
+.switch-container > h2 {
+  font-size: 3.2rem;
+  font-weight: normal;
 }
