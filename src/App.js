@@ -94,7 +94,7 @@ function App() {
           </h1>
           <motion.img
             src={news}
-            alt=''
+            alt='news'
             className='alert__img'
             style={{ translateX, translateY, scale, perspective: 150, rotateX }}
           />
@@ -105,13 +105,13 @@ function App() {
           </h1>
           <img
             src={isMaskOnDrag ? deadMan : man}
-            alt=''
+            alt='men'
             className='mask__img-men'
           />
           {isMaskOnDrag && (
             <>
-              <img src={covids} className='mask__gif-covids' />
-              <img src={covid} className='mask__gif-covid' />
+              <img src={covids} className='mask__gif-covids' alt='virus1' />
+              <img src={covid} className='mask__gif-covid' alt='virus2' />
             </>
           )}
           <motion.img
@@ -122,6 +122,7 @@ function App() {
             dragElastic={1}
             src={mask}
             className='mask__img-mask'
+            alt='mask'
           />
           <p>*ps: dont drag his mask away</p>
         </section>
@@ -133,7 +134,7 @@ function App() {
             <img
               ref={girlRef}
               src={isDistant ? girl : redGirl}
-              alt=''
+              alt='girl'
               className='distancing__img-girl'
             />
             <motion.img
@@ -142,7 +143,7 @@ function App() {
               onDragEnd={() => setIsOnDrag(false)}
               drag='x'
               src={isDistant ? dude : redDude}
-              alt=''
+              alt='dude'
               className='distancing__img-dude'
             />
           </div>
@@ -155,7 +156,7 @@ function App() {
           <div className='switch-container'>
             <img
               src={police}
-              alt=''
+              alt='ghost'
               className={
                 isPoliceOut
                   ? isPeek
@@ -181,9 +182,9 @@ function App() {
             <h2>{isSwitchOn ? 'Absolutely!' : 'Nope..'}</h2>
           </div>
           <div className='home__gif-container'>
-            <img src={oldMan} alt='' />
-            <img src={stayHome2} alt='' />
-            <img src={stayHome1} alt='' />
+            <img src={oldMan} alt='old man' />
+            <img src={stayHome2} alt='stay home 2' />
+            <img src={stayHome1} alt='stay home 1' />
           </div>
         </section>
       </div>
